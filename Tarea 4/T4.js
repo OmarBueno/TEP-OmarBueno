@@ -6,16 +6,7 @@ class Cords {
 }
 
 function getFirstAndFourthQuadrantPoints(points) {
-    let firstAndFourthQuadrantPoints = [];
-    for (let i = 0; i < points.length; i++) {
-        if (
-            (points[i].x > 0 && points[i].y > 0) ||
-            (points[i].x < 0 && points[i].y > 0)
-        ) {
-            firstAndFourthQuadrantPoints.push(points[i]);
-        }
-    }
-    return firstAndFourthQuadrantPoints;
+    return points.filter(point => (point.x > 0 && point.y > 0) || (point.x < 0 && point.y > 0));
 }
 
 function fillRandomPoints(n) {
