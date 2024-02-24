@@ -42,7 +42,9 @@ function getKClosestPoints(points, k) {
         .slice(0, k);
 }
 
-const points = fillRandomPoints(10);
-console.log(points);
-console.log("getKClosestPoints");
-console.log(getKClosestPoints(points, 4));
+module.exports = { Cords, getDistanceToOrigin, fillRandomPoints, getKClosestPoints };
+
+// const points = fillRandomPoints(10);
+// console.log(points);
+// console.log("getKClosestPoints");
+// console.log(getKClosestPoints(points, 4));

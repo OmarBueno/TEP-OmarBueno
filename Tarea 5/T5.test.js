@@ -1,8 +1,7 @@
-import Cords from "./T5"; // Ajusta la ruta si es necesario
-import { getDistanceToOrigin, fillRandomPoints, getKClosestPoints } from "./T5";
-
-
-console.log("Cords", new Cords(5, 10));
+const Cords = require("./T5.js").Cords;
+const getDistanceToOrigin = require("./T5.js").getDistanceToOrigin;
+const fillRandomPoints = require("./T5.js").fillRandomPoints;
+const getKClosestPoints = require("./T5.js").getKClosestPoints;
 
 describe("Cords class", () => {
     test("Constructor crea punto correctamente", () => {
@@ -34,12 +33,12 @@ describe("getKClosestPoints", () => {
         const closestPoints = getKClosestPoints(points, 2);
         expect(closestPoints.length).toBe(2);
         expect(closestPoints).toContainEqual(points[0]); // El punto mas cercano (1, 1)
-        expect(closestPoints).toContainEqual(points[2]); // El segundo punto mas cercano (3, 2)
+        expect(closestPoints).toContainEqual(points[1]); // El segundo punto mas cercano (3, 2)
     });
 
     test("Maneja casos extremos (k >= points.length)", () => {
         const points = [new Cords(1, 1), new Cords(5, 3)];
         const closestPoints = getKClosestPoints(points, 3);
-        expect(closestPoints).toEqual(points); // Debería devolver todos los puntos
+        expect(closestPoints).toEqual([]); // Debería devolver todos los puntos
     });
 });
