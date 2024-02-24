@@ -1,0 +1,16 @@
+{
+    "name": "tep",
+    "version": "1.0.0",
+    
+    "description": "¡Bienvenido al repositorio de la materia de Temas Especiales de Programación 2 del Grupo 2007! 🌟",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}
