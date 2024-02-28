@@ -20,12 +20,12 @@ function fillRandomPoints(n) {
     return points;
 }
 
-function getKClosestPointsFor(points, k) {
-    points.forEach((point) => (point.distance = getDistanceToOrigin(point)));
-    console.log(points);
-    points.sort((a, b) => a.distance - b.distance);
-    console.log(points);
-}
+// function getKClosestPointsFor(points, k) {
+//     points.forEach((point) => (point.distance = getDistanceToOrigin(point)));
+//     console.log(points);
+//     points.sort((a, b) => a.distance - b.distance);
+//     console.log(points);
+// }
 
 /* Using For eeach and sort
 function getKClosestPoints(points, k) {
