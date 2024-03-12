@@ -13,13 +13,22 @@ function combineAndSortArrays(arr1, arr2) {
     let i = 0;
     let j = 0;
     const combinedArray = [];
-    while (i < arr1.length && j < arr2.length) {
-        if (arr1[i] < arr2[j]) {
+    while (i < arr1.length || j < arr2.length) {
+        console.log(i, j, arr1[i], arr2[j]);
+        if (i === arr1.length) {
+            combinedArray.push(arr2[j]);
+            j++;
+        } else if (j === arr2.length) {
             combinedArray.push(arr1[i]);
             i++;
         } else {
-            combinedArray.push(arr2[j]);
-            j++;
+            if (arr1[i] < arr2[j]) {
+                combinedArray.push(arr1[i]);
+                i++;
+            } else {
+                combinedArray.push(arr2[j]);
+                j++;
+            }
         }
     }
     return combinedArray;
